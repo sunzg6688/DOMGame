@@ -19,8 +19,9 @@
 
     function loadResFinish(){
 
-        var stage_scale= calculateScale(psd_size.width);
-        var screen=getScreenSize();
+        //Android下微信，QQ，QQ浏览器（X5内核的原因？）的bug在渲染完第一个dom元素后clientHeight会变，所以重新获取设置一遍
+        stage_scale= calculateScale(psd_size.width);
+        screen=getScreenSize();
 
         createSprite();
 
