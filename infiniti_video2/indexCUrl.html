@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>唯敢 为爱翻转</title>
+    <!--<script type="text/javascript" src="js/resetSize2.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/index.css?date=0211">
+    <style>
+        html,body{
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    </style>
+    <script>
+        (function(a, e, f, g, b, c, d) {a.ClickiTrackerName = b;
+            a[b] = a[b] || function() {(a[b].queue = a[b].queue || []).push(arguments)};
+            a[b].start = +new Date; c = e.createElement(f); d = e.getElementsByTagName(f)[0];
+            c.async = 1; c.src = g; d.parentNode.insertBefore(c, d)
+        })(window, document, 'script', ('https:' == document.location.protocol ? 'https://stm-collect' : 'http://stm-cdn') + '.cn.miaozhen.com/clicki.min.js', 'stm_clicki');
+        stm_clicki('create', 'dc-886', 'auto');
+        stm_clicki('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/share.js?date=0211"></script>
+    <script type="text/javascript" src="js/VideoPlayerProcessAudio2033url.js?date=0213_7"></script>
+    <!--<script type="text/javascript" src="js/VideoPlayerTestAudio.js?date=1234"></script>-->
+
+    <script type="text/javascript" src="js/Tween.js"></script>
+    <script type="text/javascript" src="js/Sprite.js?date=0213"></script>
+    <script type="text/javascript" src="js/selectController_m.js?date=0211"></script>
+    <script type="text/javascript" src="js/main.js?date=0211_1"></script>
+    <!--<script type="text/javascript" src="js/createjs-2015.11.26.min.js"></script>-->
+
+</head>
+<body>
+<div id="urls">
+
+</div>
+<div id="videoWrapper">
+    <audio id="audioPlayer1" src="audio/audio1.mp3" preload="auto"></audio>
+    <audio id="audioPlayer2" src="audio/audio2.mp3" preload="auto"></audio>
+
+    <div style="display:none">
+        <style>
+            .dnone{
+                display: none;
+            }
+        </style>
+
+    </div>
+    <div id="loadContent">
+        <img id="loadImg" src="loadingJPG/jpg/videoLoading%2001.jpg">
+        <div id="loadSpan">
+            <!--<div id="loadTxt1" class="op0" tweens="[{type:'opacity',from:0,to:1,time:2500,repeat:false,delay:0}]">据非官方数据不完全统计，情人节往往是分手的高发期。</div>-->
+            <!--<div id="loadTxt2" class="op0" tweens="[{type:'opacity',from:0,to:1,time:2000,repeat:false,delay:0}]">今年的情人节来了，你准备好了吗？<br><br></div>-->
+            <!--<div id="suoTip" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1000,repeat:false,delay:0}]"><img class="suoIcon" src="images/suoIcon_03.jpg">锁屏观看最佳效果</div>-->
+
+            <div id="loadTxt1" class="op0" tweens="[{type:'opacity',from:0,to:1,time:2000,repeat:false,delay:0}]"><img style="height: 22px" src="images/txt1.jpg?date=0210"></div>
+            <div id="loadTxt2" class="op0" tweens="[{type:'opacity',from:0,to:1,time:2000,repeat:false,delay:0}]"><img style="height: 22px" src="images/txt2.jpg?date=0210"></div>
+            <div id="loadTxt3" class="op0" tweens="[{type:'opacity',from:0,to:1,time:2000,repeat:false,delay:0}]"><img style="height: 22px" src="images/txt3.jpg?date=0210"></div>
+            <!--<div id="suoTip" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1000,repeat:false,delay:0}]"><img style="height: 22px" src="images/txt4.jpg?date=0210"></div>-->
+        </div>
+        <img id="suoTip2" style="height: 22px" src="images/txt4.jpg?date=0211">
+        <div id="loadPercent">
+            <div id="loadPercentBg"></div>
+            <div id="loadPercentArrow">
+            </div>
+            <div id="loadPercentSpan">0%</div>
+        </div>
+
+    </div>
+
+    <div id="yindao1" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1000,repeat:false,delay:0}]">
+        <img id="yindaogif1" class="wh_100 pa" src="gifJPG/gif1/01.jpg">
+        <div id="yindaoDiv" class="yindao_desc">
+            <div id="txt1" class="yindao_descTxt">
+                <!--<div id="txt1_1" class="op0" tweens="[{type:'opacity',from:0,to:1,time:2000,repeat:false,delay:0}]">是谁在导演爱情这场戏？</div>-->
+                <!--<div id="txt1_2" class="op0" tweens="[{type:'opacity',from:0,to:1,time:2000,repeat:false,delay:0}]">平淡、激情、争执、浪漫</div>-->
+                <!--<div id="txt1_3" class="op0" tweens="[{type:'opacity',from:0,to:1,time:2000,repeat:false,delay:0}]">哪一面是你的剧情？</div>-->
+                <div id="txt1_1" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1500,repeat:false,delay:0}]"><img style="height: 22px" src="images/shishui.png"></div>
+                <div id="txt1_2" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1500,repeat:false,delay:0}]"><img style="height: 22px" src="images/pingdan.png"></div>
+                <div id="txt1_3" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1500,repeat:false,delay:0}]"><img style="height: 22px" src="images/nayimian.png"></div>
+            </div>
+            <div id="icon_txt" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1500,repeat:false,delay:0}]">
+                <div id="icon1" class="roatation_icon">
+                    <img id="icon1_wai"  src="images/rotation_wai.png?date=0211"
+                         tweens="[{type:'rotate',from:0,to:-180,time:2500,repeat:true,loopType:'from-to-from',delay:0}]">
+                    <img id="icon1_nei" class=" rotation_nei" src="images/rotation_nei.png?date=0211"
+                         tweens="[{type:'rotate',from:0,to:180,time:2500,repeat:true,loopType:'from-to-from',delay:0}]">
+                </div>
+                <div id="txt2" class="yindao_descTxt2">
+                    <!--<span>180°翻转手机</span>-->
+                    <img style="height: 22px" src="images/180fanzhuan.png?date=0211">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="yindao2" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1000,repeat:false,delay:0}]">
+        <img id="yindaogif2" class="wh_100 pa" src="gifJPG/gif2/01.jpg">
+        <div id="yindaoDiv2" class="yindao_desc">
+            <!--<div id="txt3" class="yindao_descTxt op0" tweens="[{type:'opacity',from:0,to:1,time:2000,repeat:false,delay:0}]">-->
+                <!--其实每一面都掌控在你手中-->
+            <!--</div>-->
+            <div id="txt3" class="yindao_descTxt2 op0" tweens="[{type:'opacity',from:0,to:1,time:1500,repeat:false,delay:0}]">
+                <img style="height: 22px" src="images/qishi.png">
+            </div>
+            <img id="icon2" class="yindao2_rotation op0" src="images/yindao2_desc.png" tweens="[{type:'opacity',from:0,to:1,time:1500,repeat:false,delay:0}]">
+            <!--<div id="txt4" class="yindao_descTxt op0" tweens="[{type:'opacity',from:0,to:1,time:2000,repeat:false,delay:0}]">-->
+                <!--随时180度翻转手机反转剧情-->
+            <!--</div>-->
+            <div style="height: 5px"></div>
+            <div id="txt4" class="yindao_descTxt2 op0" tweens="[{type:'opacity',from:0,to:1,time:1500,repeat:false,delay:0}]">
+                <img style="height: 22px" src="images/suishi180.png?date=0211">
+            </div>
+            <div id="icon3" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1500,repeat:false,delay:0}]">
+                <img onclick="playVideosByClick()" id="video_btn"  class="video_btn" src="images/yindao2_video_btn.png" tweens="[{type:'scale',from:0.97,to:1.03,time:1000,repeat:true,loopType:'from-to-from',delay:0}]">
+            </div>
+        </div>
+    </div>
+
+    <div id="video1Content">
+        <!--<img id="video1" class="videoImg" src="video_jpg/video1/video1%20180.jpg">-->
+        <img id="video1" class="videoImg" src="">
+
+        <div class="video_rotation_tip">
+            <div class="rotation_tip_txt" style="color: #ffffff">
+                <img style="height: 50px" src="images/fanzhuanshouji.png">
+            </div>
+            <div class="roatation_icon2">
+                <img id="video1_wai" class="sprite" src="images/rotation_wai.png?date=0211"
+                     tweens="[{type:'rotate',from:0,to:-180,time:2500,repeat:true,loopType:'from-to-from',delay:0}]">
+                <img id="video1_nei" class="sprite rotation_nei" src="images/rotation_nei.png?date=0211"
+                     tweens="[{type:'rotate',from:0,to:180,time:2500,repeat:true,loopType:'from-to-from',delay:0}]">
+            </div>
+            <div class="rotation_tip_txt" style="color: #ffffff">
+                <img style="height: 50px" src="images/fanzhuanaiqing.png?date=0212">
+            </div>
+        </div>
+        <div class="video_rotation_tip2">
+            <div class="rotation_tip_txt" style="opacity: 0">
+                <img style="height: 50px" src="images/fanzhuanshouji.png?date=0211">
+            </div>
+            <div style="float:left;width: 50px;line-height: 12px;height: 12px;text-align: center"><img style="width: 50px" src="images/180dudu.png?date=0211"></div>
+            <div class="rotation_tip_txt" style="opacity: 0">
+                <img style="height: 50px" src="images/fanzhuanaiqing.png">
+            </div>
+        </div>
+        <img class="musicIcon" src="images/musicOn.png">
+        <img class="hide" src="images/musicOn.png">
+        <img class="hide" src="images/musicOff.png">
+    </div>
+
+    <div id="video2Content">
+        <!--<img id="video2" class="videoImg" src="video_jpg/video2/video2%20180.jpg">-->
+        <img id="video2" class="videoImg" src="">
+
+        <div class="video_rotation_tip">
+            <div class="rotation_tip_txt" style="color: #ffffff">
+                <img style="height: 50px" src="images/fanzhuanshouji.png">
+            </div>
+            <div class="roatation_icon2">
+                <img class="sprite" src="images/rotation_wai.png?date=0211"
+                     tweens="[{type:'rotate',from:0,to:-180,time:2500,repeat:true,loopType:'from-to-from',delay:0}]">
+                <img class="sprite rotation_nei" src="images/rotation_nei.png?date=0211"
+                     tweens="[{type:'rotate',from:0,to:180,time:2500,repeat:true,loopType:'from-to-from',delay:0}]">
+            </div>
+            <div class="rotation_tip_txt" style="color: #ffffff">
+                <img style="height: 50px" src="images/fanzhuanaiqing.png?date=0212">
+            </div>
+        </div>
+        <div class="video_rotation_tip2">
+            <div class="rotation_tip_txt" style="opacity: 0">
+                <img style="height: 50px" src="images/fanzhuanshouji.png">
+            </div>
+            <div style="float:left;width: 50px;line-height: 12px;height: 12px;text-align: center"><img style="width: 50px" src="images/180dudu.png"></div>
+            <div class="rotation_tip_txt" style="opacity: 0">
+                <img style="height: 50px" src="images/fanzhuanaiqing.png">
+            </div>
+        </div>
+        <img class="musicIcon" src="images/musicOn.png">
+    </div>
+
+    <div id="infoContent" class="op0" tweens="[{type:'opacity',from:0,to:1,time:1000,repeat:false,delay:0}]">
+        <img id="infogif" class="wh_100 pa" src="gifJPG/gif3/01.jpg">
+        <img class="infoDesc" src="images/info_desxTxt.png?date=0211">
+        <a href="http://www.infiniti.com.cn/vehicles/new-vehicles/qx30.html"><img class="ljcp_btn" onclick="stm_clicki('send', 'event', '了解产品', '了解产品', '了解产品', 3);" src="images/ljcp_btn.png"></a>
+        <img class="yysj_btn" src="images/yysj_btn.png">
+        <img onclick="playVideoByReplay()" class="cxgk_btn" src="images/cxgk_btn.png">
+    </div>
+    <div class="submitContainer">
+        <div class="submitTitle">预约试驾</div>
+        <div class="submitTitle2">我们的经销商会为您提供贴心的预约试驾服务，请您填写如下信息，我们会尽快与您联系</div>
+        <div class="closeSubmitContent"><img style="width: 30px;height: 30px;margin-top: 10px;margin-right: 10px" src="images/closeBtn.jpg"></div>
+        <div class="submitContent">
+            <div class="floatItem">
+                <div>
+                    <span class="span3">请选择试驾车型＊</span>
+                </div>
+                <div class="cxS_content">
+                    <select id="cx">
+                        <option selected="selected" value="QX30">QX30</option>
+                        <option value="Q50">Q50</option>
+                        <option value="Q50L">Q50L</option>
+                        <option value="Q60">Q60</option>
+                        <option value="Q70L">Q70L</option>
+                        <option value="QX50">QX50</option>
+                        <option value="QX60">QX60</option>
+                        <option value="QX70">QX70</option>
+                        <option value="QX80">QX80</option>
+                        <option value="ESQ">ESQ</option>
+                    </select>
+                    <div class="s_bg">
+                        <span id="cxSpan">QX30</span>
+                        <div class="downArrow">∨</div>
+                    </div>
+                </div>
+            </div>
+            <div  class="floatItem">
+                <div>
+                    <span class="span3">选择省＊</span>
+                </div>
+                <div class="cxS_content">
+                    <select id="province">
+                        <option selected="selected" disabled="disabled" value="">请选择</option>
+                        <option value="安徽省">安徽省</option>
+                        <option value="北京市">北京市</option>
+                        <option value="重庆市">重庆市</option>
+                        <option value="福建省">福建省</option>
+                        <option value="甘肃省">甘肃省</option>
+                        <option value="广东省">广东省</option>
+                        <option value="广西省">广西省</option>
+                        <option value="贵州省">贵州省</option>
+                        <option value="海南省">海南省</option>
+                        <option value="河北省">河北省</option>
+                        <option value="河南省">河南省</option>
+                        <option value="湖北省">湖北省</option>
+                        <option value="湖南省">湖南省</option>
+                        <option value="吉林省">吉林省</option>
+                        <option value="江苏省">江苏省</option>
+                        <option value="江西省">江西省</option>
+                        <option value="辽宁省">辽宁省</option>
+                        <option value="内蒙古自治区">内蒙古自治区</option>
+                        <option value="宁夏回族自治区">宁夏回族自治区</option>
+                        <option value="青海省">青海省</option>
+                        <option value="山东省">山东省</option>
+                        <option value="山西省">山西省</option>
+                        <option value="陕西省">陕西省</option>
+                        <option value="上海市">上海市</option>
+                        <option value="四川省">四川省</option>
+                        <option value="天津市">天津市</option>
+                        <option value="新疆维吾尔自治区">新疆维吾尔自治区</option>
+                        <option value="云南省">云南省</option>
+                        <option value="浙江省">浙江省</option>
+                    </select>
+
+                    <div class="s_bg">
+                        <span id="provinceSpan">请选择</span>
+                        <div class="downArrow">∨</div>
+                    </div>
+                </div>
+            </div>
+            <div  class="floatItem">
+                <div><span class="span3">选择城市＊</span></div>
+                <div class="cxS_content">
+                    <select id="city">
+                        <option selected="selected" disabled="disabled" value="">请选择</option>
+                    </select>
+
+                    <div class="s_bg">
+                        <span id="citySpan">请选择</span>
+                        <div class="downArrow">∨</div>
+                    </div>
+                </div>
+            </div>
+            <div  class="floatItem">
+                <div><span class="span3">选择经销商＊</span></div>
+                <div class="cxS_content">
+                    <select id="jxs">
+                        <option selected="selected" disabled="disabled" value="">请选择</option>
+                    </select>
+
+                    <div class="s_bg">
+                        <span id="jxsSpan">请选择</span>
+                        <div class="downArrow">∨</div>
+                    </div>
+                </div>
+            </div>
+            <div  class="floatItem">
+                <div><span class="span3">选择性别＊</span></div>
+                <div class="cxS_content">
+                    <select id="xb">
+                        <option selected="selected" disabled="disabled" value="">请选择</option>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+
+                    <div class="s_bg">
+                        <span id="xbSpan">请选择</span>
+                        <div class="downArrow">∨</div>
+                    </div>
+                </div>
+            </div>
+            <div  class="floatItem">
+                <div><span class="span3">姓名＊</span></div>
+                <div class="cxS_content">
+                    <input id="nameInput">
+                </div>
+            </div>
+            <div  class="floatItem">
+                <div><span class="span3">手机号＊</span></div>
+                <div class="cxS_content">
+                    <input id="phoneInput">
+                </div>
+            </div>
+            <div  class="floatItem">
+                <div><span class="span3">您预计多久以后换车＊</span></div>
+                <div class="cxS_content">
+                    <select id="hcTime">
+                        <option selected="selected" disabled="disabled" value="">请选择</option>
+                        <option value="1周之内">1周之内</option>
+                        <option value="1个月内">1个月内</option>
+                        <option value="1-3个月">1-3个月</option>
+                        <option value="3-6个月">3-6个月</option>
+                        <option value="6-12个月">6-12个月</option>
+                        <option value="1年以上">1年以上</option>
+                        <option value="不确定">不确定</option>
+                    </select>
+
+                    <div class="s_bg">
+                        <span id="hcTimeSpan">请选择</span>
+                        <div class="downArrow">∨</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="checkBox1">
+            <input style="margin-top: 3px" type="checkbox" checked="true">
+            <span class="span4">我已阅读并同意《隐私保护政策》</span>
+            <div>
+                <span class="span5">点这里阅读条款</span>
+            </div>
+            <br>
+        </div>
+        <div class="submBtn_div">
+            <img class="submitBtn" src="images/submitBtn.png">
+        </div>
+    </div>
+    <div class="pop">
+        <div class="popClose"><img class="popCloseBtn" style="width: 30px;height: 30px;margin-top: 10px;margin-right: 10px;float: right" src="images/closeBtn.jpg"></div>
+        <div class="popTitle">英菲尼迪隐私保护政策</div>
+        <div class="popContent">
+            为确保英菲尼迪客户个人信息（以下简称“个人信息”）能够得到安全有效的管理和保护，日产（中国）投资有限公司及东风英菲尼迪汽车有限公司（以下合称“英菲尼迪”）将严格遵守并将促使其英菲尼迪品牌授权经销商（以下简称“经销商”）严格遵守与个人信息保护相关的法律法规以及本英菲尼迪客户个人信息保护政策（以下简称“本政策”）。<br>
+
+            个人信息和隐私的范围<br>
+
+            当您访问本网站的时候可能被要求提供您的以下基本个人信息：<br>
+            姓名、有效证件号码；<br>
+            联系地址、电话号码和电子邮件地址；<br>
+            车辆信息<br>
+            您可以自由选择是否提供。<br>
+
+            英菲尼迪尊重并保护客户的隐私权，除非为了下述诸如调查特定产品的使用情况或其它专项活动等特定的目的，并经客户事先同意，本网站不会刻意收集客户的其他个人信息，例如：性别、年龄、出生日期、职业、工作单位、教育程度、收入状况、婚姻家庭状况、健康状况、微博账号、微信号等。<br>
+
+            如果您以前曾通过本网站提供过您的电子邮件地址，且不希望以后再收到我们的电子邮件提示服务，您可以通过 “联系我们”向 customercare@Infiniti.com
+            发出您的要求，或致电英菲尼迪客户服务热线，我们将即刻为您办理数据移除工作，以确保您不会再收到类似的电子邮件。<br>
+
+            如果用户的个人信息发生改变，我们会竭力提供服务渠道，方便客户将更改过的最新个人信息数据提供给我们。用户可以将更改的信息发送电子邮件至 customercare@Infiniti.com， 或致电英菲尼迪客户服务热线。<br>
+
+            个人信息的收集<br>
+
+            英菲尼迪及其经销商取得个人信息以获得英菲尼迪客户的同意为前提。<br>
+
+            英菲尼迪及其经销商通过以下方式收集个人信息：<br>
+            销售英菲尼迪产品或提供与英菲尼迪产品相关的服务时取得个人信息；<br>
+            通过官方网站的用户注册或提供与英菲尼迪产品及服务相关的会员服务时取得个人信息；<br>
+            进行与英菲尼迪产品和服务相关的市场或促销活动时取得市场或促销活动参与者的个人信息；<br>
+            解答客户对英菲尼迪产品和服务的咨询时（包括以向客户提供反馈为目的）取得个人信息；<br>
+            进行产品或市场调查时（包括委托第三方调查公司实施调查的情形）取得个人信息；<br>
+            以其他合法和正当的方式取得个人信息。<br>
+            个人信息的使用<br>
+
+            英菲尼迪及其经销商将按照客户同意的目的、范围和方式使用其个人信息。<br>
+
+            英菲尼迪及其经销商可能为了以下目的而合理使用个人信息：<br>
+            以销售英菲尼迪产品和提供与英菲尼迪产品相关的服务为目的；<br>
+            以进行客户满意度调查或其他与英菲尼迪产品和服务相关的调查为目的；<br>
+            以解答客户对英菲尼迪产品和服务的咨询并给予客户反馈为目的；<br>
+            以向客户提供与英菲尼迪产品或服务相关的各种会员服务为目的；<br>
+            以向客户提供与英菲尼迪产品或服务相关的产品信息、服务信息（包括但不限于产品或服务的促销信息、市场活动信息等）为目的；<br>
+            其他经客户同意的使用目的。<br>
+            英菲尼迪及其经销商依照其依法收集的个人信息的形式，使用该等个人信息的方式主要有拨打电话、发送短信、发送电子邮件、发送传真、寄送信件或包裹、发送微博私信或微信等，前述使用可能由英菲尼迪或其经销商的雇员进行，也有可能由承担保密义务的英菲尼迪或其经销商的供应商进行。<br>
+
+            个人信息的保护<br>
+
+            用户的个人信息在传递到达我方后的时间内，都受到我们的保护。英菲尼迪及其经销商将对个人信息严格保密，并采取合理必要的技术措施和其他措施妥善管理和保护个人信息，确保个人信息不被非法泄露、篡改、出售或者被非法向无关方提供。<br>
+
+            个人信息的披露<br>
+
+            英菲尼迪从不将用户的信息出售或出租给任何第三方，我们只将用户信息提供给我们的关联公司和授权经销商/服务中心，以及与我们签有协议能代表我们的市场业务伙伴，例如宣传册派发邮寄服务提供商等。如果用户在本网站上因某项服务进行了登记，并希望本网站提供所需求的服务，我们会将用户的姓名及其他相关必要信息提供给我们所有相关的第三方，方便其提供所需服务。自收集到用户信息之刻起，我们向相关合作伙伴提供的用户信息均将遵循相关法律法规的规定。<br>
+
+            英菲尼迪如遇相关人员执行国家审计任务、法律任务，或需向提供服务的英菲尼迪供应商提供信息，我们可能会将无论是否涉及个人信息的数据信息提供给他们。不论何时，我们都会要求出于上述目的的人士在接收用户信息时书面保证这些个人信息纯属机密用途，仅用于被许可的目的，一旦这些服务任务完成后，就必须将个人信息退回英菲尼迪，或就地销毁。如果我们接到法院判决指令、政府命令等文件要求我们对其披露用户的个人信息（无论是可识别或不可识别个人数据），我们也将依法予以配合。只要时间允许，英菲尼迪会按照个人信息中含有的联络信息通知相关用户，说明他的信息将要向外披露或已经向外披露。<br>
+
+            如果我们合理地判定属于如下状况时 (i) 为保护个人的安全，(ii) 为保护公众的安全，或 (iii) 为保护英菲尼迪和/或本网站的安全与稳定，我们可能也会将用户个人信息向外披露（无论是可识别或不可识别个人数据）。<br>
+
+            未成年人保护<br>
+
+            英菲尼迪如果通过网站获悉未成年用户的个人信息，英菲尼迪将不会允许其参加本网站上提供的任何服务、活动。对于其提交的个人信息，我们会立即予以删除。<br>
+
+            隐匿信息- Cookies 及日志文件<br>
+
+            Cookie
+            是一组用户信息，通常储存在用户的硬盘中并含有用户的相关信息。Cookie的使用不会直接与用户的个人信息相关联，除非用户自行提供（详见下列条款）。通常情况下，在您访问的时段里，我们站点的Cookies只用作匿名流量统计以及提高站点的用户友好度。但在站点的特定部分，Cookies有时可能会有额外用途。如果您访问这些部分，您将会收到提示信息。<br>
+
+            您随时可以对您的浏览器进行设置来禁用Cookies。即便用户拒绝使用Cookie或将Cookie删除掉，用户仍然可以使用本网站。唯一不便之处就是此用户在本网站上的某些区域内会受到限制。如：此用户将无法接收到来自本公司的特别促销信息，或无法参与本公司举行的任何可能的竞赛活动等。Cookie还可以让我们追踪并统计点击率，更准确的了解用户所需，
+            以便让用户在本网站获得更好的体验。<br>
+
+            英菲尼迪还会保存所有网站访问者登陆页面的标准数据。这些数据内容可能包括：<br>
+            您访问此网站时应用的互联网域名<br>
+            您的IP地址 （当访问者上网浏览本网站时，他的计算机会自动将IP地址传送给我们。该访问者的IP地址可为静态的也可以是动态的， 区别在于静态地址可以识别访问者身份，而动态IP地址则不能）<br>
+            您所使用的浏览器类型及计算机的操作系统<br>
+            您访问本网站的日期和时间<br>
+            您在本网站上所浏览的页面<br>
+            您是通过哪一个联接网页地址登陆本网站的<br>
+            英菲尼迪通过网站登陆数据表和内容点击情况来设计本网站，找出网页内容受欢迎的原因，进一步完善网站使其对访问者更加实用。所保存下来的网站登陆数据是一种序列文
+            件，通常情况下将不会通过分析登陆数据表来识别访问者个人身份。但是，如果发现有人试图侵占、干扰或破坏本网站，我们将通过网站登陆数据表将肇事者的身份
+            查出来。如果我们得悉有违反当地法律、法规的事情发生，并有证据证明，我们也会向相关执法人员提供访问者的登陆数据表。<br>
+
+            英菲尼迪在其非官方网站上的宣传广告可能由英菲尼迪的服务提供商来完成。这些服务提供商可能会使用 Cookies
+            搜集访问者的登陆信息，内容包括访问者所浏览的网页，浏览日期和时间，浏览器情况和/或IP地址。我们通常不会将这些信息与访问者个人信息进行关联，除非
+            发生上述事情。我们收集访问者信息只是用来为有需求、感兴趣的客户提供定制化的服务。<br>
+
+            本政策的修订<br>
+
+            英菲尼迪保留随时修订此个人信息保护政策的权利。<br>
+
+            <div style="height: 30px"></div>
+        </div>
+    </div>
+    <!--<img id="loadingTip" class="loadingTip" src="images/loadingTip.jpg">-->
+    <div id="aaa" style="position: absolute;left: 0;top: 20px;z-index: 99999;font-size: 14px;color: #ffffff"></div>
+    <img id="loadingVideoGif" style="left: 45%;top: 45%;position: absolute;z-index: 999;display: none;width: 30px;height: 30px" src="images/loading.gif">
+</div>
+<script>
+    stm_clicki('send', 'pageview', {'page': '加载页', 'title': '加载页'});
+
+    //布局样式相关的逻辑
+    var currentPlayer = "loading";
+    var webpSupport = false;
+    function initVideoContent() {
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+
+        if (w < h) {
+
+            var widthValue = h + "px";
+            var heightValue = w + "px";
+
+            var videoHeight=w;
+            var videoWidth=(w/422)*750;
+            var videoLeft=-(videoWidth-h)/2;
+
+            var videoScaleSize={height:videoHeight+"px",width:videoWidth+"px",left:videoLeft+"px",top:"0px"};
+            setElementStyles("video1",videoScaleSize);
+            setElementStyles("video2",videoScaleSize);
+
+            var videoWidth=h;
+            var videoHeight=534/856*h;
+            var videoTop=-(videoHeight-w)/2;
+            var videoScaleSize2={height:videoHeight+"px",width:videoWidth+"px",left:"0px",top:videoTop+"px"};
+            setElementStyles("yindaogif1",videoScaleSize2);
+            setElementStyles("yindaogif2",videoScaleSize2);
+            setElementStyles("infogif",videoScaleSize2);
+
+            var transformValue = "rotate(90deg)";
+            var transformValue2 = "rotate(-90deg)";
+            var transformOriginValue = w / 2 + "px " + w / 2 + "px";
+            var styles = {
+                width: widthValue,
+                height: heightValue,
+                transform: transformValue,
+                transformOrigin: transformOriginValue
+            };
+            var styles2 = {
+                width: widthValue,
+                height: heightValue,
+                transform: transformValue2,
+                transformOrigin: transformOriginValue
+            };
+            setElementStyles("video1Content", styles);
+            setElementStyles("video2Content", styles2);
+            setElementStyles("loadContent", styles);
+            setElementStyles("yindao1", styles);
+            setElementStyles("yindao2", styles2);
+
+            var loadImgWidth = w * 0.6 + "px";
+            var loadImgHeight = w * 0.6 + "px";
+            var loadImgLeft = (h - w * 0.6) / 2 + "px";
+            var loadImgTop = "30px";
+            var styles3 = {width: loadImgWidth, height: loadImgHeight, left: loadImgLeft, top: loadImgTop};
+            setElementStyles("loadImg", styles3);
+
+            eid("loadSpan").style.top = (w * 0.6) + "px";
+            eid("loadPercent").style.top = (w - 30) + "px";
+
+            eid("yindaoDiv").style.top=(w-210)/2+"px";
+            eid("yindaoDiv2").style.top=(w-245)/2+"px";
+
+        } else {
+
+            var widthValue = w + "px";
+            var heightValue = h + "px";
+
+            var videoHeight=h;
+            var videoWidth=(h/422)*750;
+            var videoLeft=-(videoWidth-w)/2;
+
+            var videoScaleSize={height:videoHeight+"px",width:videoWidth+"px",left:videoLeft+"px",top:"0px"};
+            //setElementStyles("video1",videoScaleSize);
+            //setElementStyles("video2",videoScaleSize);
+
+            var videoWidth=w;
+            var videoHeight=534/856*w;
+            var videoTop=-(videoHeight-h)/2;
+            var videoScaleSize2={height:videoHeight+"px",width:videoWidth+"px",left:"0px",top:videoTop+"px"};
+            setElementStyles("yindaogif1",videoScaleSize2);
+            setElementStyles("yindaogif2",videoScaleSize2);
+            setElementStyles("infogif",videoScaleSize2);
+
+            setElementStyles("video1",videoScaleSize2);
+            setElementStyles("video2",videoScaleSize2);
+
+            var transformValue = "rotate(0deg)";
+            var transformOriginValue = "0px 0px";
+            var styles = {
+                width: widthValue,
+                height: heightValue,
+                transform: transformValue,
+                transformOrigin: transformOriginValue
+            };
+            setElementStyles("video1Content", styles);
+            setElementStyles("video2Content", styles);
+            setElementStyles("loadContent", styles);
+            setElementStyles("yindao1", styles);
+            setElementStyles("yindao2", styles);
+
+            var loadImgWidth = h * 0.6 + "px";
+            var loadImgHeight = h * 0.6 + "px";
+            var loadImgLeft = (w - h * 0.6) / 2 + "px";
+            var loadImgTop = "30px";
+            var styles3 = {width: loadImgWidth, height: loadImgHeight, left: loadImgLeft, top: loadImgTop};
+            setElementStyles("loadImg", styles3);
+
+            eid("loadSpan").style.top = (h * 0.6) + "px";
+            eid("loadPercent").style.top = (h - 30) + "px";
+            eid("yindaoDiv").style.top=(h-210)/2+"px";
+            eid("yindaoDiv2").style.top=(h-245)/2+"px";
+        }
+        resizeInfoContent();
+    }
+
+    var videoSize={height:422,width:750};
+
+    function resizeInfoContent(){
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+        if (w < h) {
+            var widthValue = h + "px";
+            var heightValue = w + "px";
+
+            var transformValue = "rotate(90deg)";
+            var transformValue2 = "rotate(-90deg)";
+            var transformOriginValue = w / 2 + "px " + w / 2 + "px";
+            var styles = {
+                width: widthValue,
+                height: heightValue,
+                top:"0px",
+                bottom:"",
+                transform: transformValue,
+                transformOrigin: transformOriginValue
+            };
+            var styles2 = {
+                width: widthValue,
+                height: heightValue,
+                top:"",
+                bottom:"0px",
+                transform: transformValue2,
+                transformOrigin: transformOriginValue
+            }
+            if(currentPlayer==1){
+                setElementStyles("infoContent",styles);
+            }else if(currentPlayer==2){
+                setElementStyles("infoContent",styles2);
+            }else{
+                setElementStyles("infoContent",styles);
+            }
+        }else{
+            var widthValue = w + "px";
+            var heightValue = h + "px";
+
+            var transformValue = "rotate(0deg)";
+            var transformOriginValue = "0px 0px";
+            var styles = {
+                width: widthValue,
+                height: heightValue,
+                top:"0px",
+                bottom:" ",
+                transform: transformValue,
+                transformOrigin: transformOriginValue
+            };
+            setElementStyles("infoContent",styles);
+        }
+    }
+
+    function setElementStyles(id, styles) {
+        var element = eid(id);
+        for (var key in styles) {
+            if (key == "transform") {
+                element.style.webkitTransform = styles[key];
+                element.style.MozTransform = styles[key];
+                element.style.msTransform = styles[key];
+                element.style.OTransform = styles[key];
+                element.style.transform = styles[key];
+            } else if (key == "transformOrigin") {
+                element.style.webkitTransformOrigin = styles[key];
+                element.style.MozTransformOrigin = styles[key];
+                element.style.msTransformOrigin = styles[key];
+                element.style.OTransformOrigin = styles[key];
+                element.style.transformOrigin = styles[key];
+            } else if (key == "width") {
+                element.style.width = styles[key];
+            } else if (key == "height") {
+                element.style.height = styles[key];
+            } else if (key == "left") {
+                element.style.left = styles[key];
+            } else if (key == "top") {
+                element.style.top = styles[key];
+            }else if(key=="bottom"){
+                element.style.bottom=styles[key];
+            }
+        }
+    }
+
+    function resizeHandler1() {
+        initVideoContent();
+        if(resizeTimer){
+            clearInterval(resizeTimer);
+        }
+    }
+    initVideoContent();
+    eid("loadContent").style.display="block";
+
+    var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
+    window.addEventListener(resizeEvt, resizeHandler1, false);
+
+//    var resizeTimer=setInterval(function(){
+//        initVideoContent();
+//    },50);
+
+    function createSprite() {
+        var sprites = document.getElementsByClassName("sprite");
+        for (var i = 0; i < sprites.length; i++) {
+            var sprite = new Sprite(sprites[i]);
+            sprite.start();
+        }
+    }
+
+    createSprite();
+
+    var loadTxt1;
+    var loadTxt2;
+    var loadTxt3;
+//    var suoTip;
+    var txt1_1;
+    var txt1_2;
+    var txt1_3;
+    var icon_txt;
+    var txt3;
+    var icon2;
+    var txt4;
+    var icon3;
+
+    var icon1_wai;
+    var icon1_nei;
+    var loadingPlayComplete=false;
+    var video_btn;
+
+    function createAnimateTxt(){
+        loadTxt1=new Sprite(document.getElementById("loadTxt1"));
+        loadTxt2=new Sprite(document.getElementById("loadTxt2"));
+        loadTxt3=new Sprite(document.getElementById("loadTxt3"));
+//        suoTip=new Sprite(document.getElementById("suoTip"));
+        txt1_1=new Sprite(document.getElementById("txt1_1"));
+        txt1_2=new Sprite(document.getElementById("txt1_2"));
+        txt1_3=new Sprite(document.getElementById("txt1_3"));
+        icon_txt=new Sprite(document.getElementById("icon_txt"));
+        txt3=new Sprite(document.getElementById("txt3"));
+        icon2=new Sprite(document.getElementById("icon2"));
+        txt4=new Sprite(document.getElementById("txt4"));
+        icon3=new Sprite(document.getElementById("icon3"));
+        icon1_wai=new Sprite(document.getElementById("icon1_wai"));
+        icon1_nei=new Sprite(document.getElementById("icon1_nei"));
+        video_btn=new Sprite(document.getElementById("video_btn"));
+
+        loadTxt1.start();
+        setTimeout(function(){
+            loadTxt2.start();
+        },2500);
+        setTimeout(function(){
+            loadTxt3.start();
+        },5000);
+        setTimeout(function(){
+//            suoTip.start();
+        },7500);
+        setTimeout(function(){
+            loadingPlayComplete=true;
+            if (videoPlayer1&&videoPlayer1.canPlay && videoPlayer2&&videoPlayer2.canPlay) {
+                videoPlayer1.playCompleteCallBack = videoPlayComplete;
+                videoPlayer2.playCompleteCallBack = videoPlayComplete;
+                eid("yindao1").style.display = "block";
+                eid("loadContent").style.display="none";
+                animateYindao1();
+            }
+        },8500);
+    }
+
+    createAnimateTxt();
+
+    animate();
+    function animate(time) {
+        var time = new Date().getTime();
+//        requestAnimationFrame(animate);
+        TWEEN.update(time);
+
+        setTimeout(animate,1000/15);
+    }
+
+    var div1 = eid("videoWrapper");
+    div1.addEventListener("touchmove", moveTouchHandler, false);
+    function moveTouchHandler(event) {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+
+</script>
+</body>
+<script>
+    //展示流程和视频播放相关逻辑
+    var currentPlayer = "loading";
+    var audioPlayer1;
+    var audioPlayer2;
+    var musicMuted=false;
+
+    var isLowPhone=false;
+
+    audioPlayer1=eid("audioPlayer1");
+    audioPlayer2=eid("audioPlayer2");
+
+    var ua = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(ua)) {
+        var ver = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+        ver = parseInt(ver[1], 10);
+        if(ver<10){
+            isLowPhone=true;
+        }
+        if(ua.match(/MicroMessenger/i)!="micromessenger"){
+            audioPlayer1.addEventListener("canplay",audio1CanPlay);
+            audioPlayer2.addEventListener("canplay",audio2CanPlay);
+        }else{
+//            eid("aaa").innerHTML+="weixin1111";
+            document.addEventListener("WeixinJSBridgeReady", function () {
+//                eid("aaa").innerHTML+="weixin222222";
+                audioPlayer1.play();
+                audioPlayer1.addEventListener("canplay",audio1CanPlayWX);
+
+                audioPlayer2.play();
+                audioPlayer2.addEventListener("canplay",audio2CanPlayWX);
+            }, false);
+        }
+    } else if (/android/.test(ua)) {
+
+        audioPlayer1.addEventListener("canplay",audio1CanPlayAndroid);
+        audioPlayer2.addEventListener("canplay",audio2CanPlayAndroid);
+
+    }
+
+
+    function audio1CanPlayAndroid(){
+//        eid("aaa").innerHTML+="canplayAndroid2225555";
+        audioPlayer1.play();
+        audioPlayer1.muted=true;
+        if(currentPlayer&&currentPlayer==1){
+            audioPlayer1.muted=musicMuted;
+        }
+    }
+
+    function audio2CanPlayAndroid(){
+//        eid("aaa").innerHTML+="canplayAndroid2226666";
+        audioPlayer2.play();
+        audioPlayer2.muted=true;
+        if(currentPlayer&&currentPlayer==2){
+            audioPlayer1.muted=musicMuted;
+        }
+    }
+
+    function audio1CanPlay(){
+//        eid("aaa").innerHTML+="canplayIOS1111";
+        audioPlayer1.pause();
+    }
+
+    function audio2CanPlay(){
+//        eid("aaa").innerHTML+="canplayIOS2222";
+        audioPlayer2.pause();
+    }
+
+    function audio1CanPlayWX(){
+//        eid("aaa").innerHTML+="canplay111111WX1111";
+        audioPlayer1.pause();
+    }
+
+    function audio2CanPlayWX(){
+//        eid("aaa").innerHTML+="canplay222222WX22222";
+        audioPlayer2.pause();
+    }
+
+    var loadingPlayer;
+    var loadingPlayerSrc;
+    var loadingPlayerParams0;
+    function loadLoading() {
+        if (webpSupport) {
+            loadingPlayerSrc = "loadingJPG/webp/videoLoading ";
+        } else {
+            loadingPlayerSrc = "loadingJPG/jpg/videoLoading ";
+        }
+        loadingPlayerParams0 = {
+            start: 1,
+            end: 17,
+            time: 4,
+            src: loadingPlayerSrc,
+            videoId: "loadImg",
+            loadId: "",
+            srcFormat: 1,
+            canPlayPercent:100
+        };
+        loadingPlayer = new VideoPlayer(loadingPlayerParams0, null, playLoading);
+    }
+
+    function playLoading() {
+        loadingPlayer.currentTime = 0;
+        loadingPlayer.playCompleteCallBack = function () {
+            loadingPlayer.currentTime = 0;
+            loadingPlayer.play();
+        };
+        loadingPlayer.play();
+
+        loadVideos();
+    }
+
+    loadLoading();
+
+    var gif3;
+    function loadGifs(){
+        var gif1Params3 = {
+            start: 1,
+            end: 12,
+            time:3,
+            src: "gifJPG/gif3/",
+            videoId: "infogif",
+            loadId: "",
+            srcFormat: 1,
+            canPlayPercent:100
+        };
+        gif3 = new VideoPlayer(gif1Params3, null, loadGifComplete);
+    }
+
+    function loadGifComplete(){
+    }
+
+    function gifLoop(){
+    }
+
+    var videoPlayer2;
+    var videoPlayer1;
+    var video1Src;
+    var video2Src;
+    var videoParams1;
+    var videoParams2;
+    function loadVideos() {
+        if (webpSupport) {
+            video1Src = "videoJPG/Honda_01_480_webp/Honda_01 ";
+            video2Src = "videoJPG/Honda_02_480_webp/Honda_02 ";
+        } else {
+            video1Src = "video_jpg2/video1/video1 ";
+            video2Src = "video_jpg2/video2/video2 "
+        }
+        videoParams1 = {
+            start: 1,
+            end: 533,
+            time: 64.1,
+            src: video1Src,
+            videoId: "video1",
+            loadId: "",
+            srcFormat: 2,
+            canPlayPercent:35
+        };
+        videoParams2 = {
+            start: 1,
+            end: 533,
+            time: 64.1,
+            src: video2Src,
+            videoId: "video2",
+            loadId: "",
+            srcFormat: 2,
+            canPlayPercent:35
+        };
+        videoPlayer1 = new VideoPlayer(videoParams1, videoLoadPercent, videoLoadComplete);
+        videoPlayer2 = new VideoPlayer(videoParams2, videoLoadPercent, videoLoadComplete);
+        videoPlayer1.canPlayCallBack=videosCanPlay;
+        videoPlayer2.canPlayCallBack=videosCanPlay;
+        videoPlayer1.stopByLoadingCallBack=videosStop;
+        videoPlayer2.stopByLoadingCallBack=videosStop;
+        videoPlayer1.playByLoadingCallBack=playVideoByLoadingComplete;
+        videoPlayer2.playByLoadingCallBack=playVideoByLoadingComplete
+        loadStartTime=new Date().getTime();
+    }
+
+    var loadStartTime;
+
+    var loadCurrentIndex = 0;
+    var loadTotal = 533*0.35 * 2;
+
+    function videoLoadPercent(videoId) {
+        loadCurrentIndex++;
+        var percentNum = Math.floor(loadCurrentIndex / loadTotal * 100);
+        if(percentNum>100)return;
+        eid("loadPercentBg").style.width = percentNum + "%";
+        eid("loadPercentArrow").style.right = (100 - percentNum) + "%";
+        eid("loadPercentSpan").style.right = (100 - percentNum) + "%";
+        eid("loadPercentSpan").innerHTML = percentNum + "%";
+    }
+
+    function videosCanPlay(){
+        if(loadingPlayComplete){
+            if (videoPlayer1.canPlay && videoPlayer2.canPlay) {
+                videoPlayer1.playCompleteCallBack = videoPlayComplete;
+                videoPlayer2.playCompleteCallBack = videoPlayComplete;
+                eid("yindao1").style.display = "block";
+                eid("loadContent").style.display="none";
+                animateYindao1();
+            }
+        }else{
+            if(videoPlayer1.canPlay && videoPlayer2.canPlay){
+                eid("loadPercent").style.display="none";
+            }
+        }
+    }
+
+    var videoStopByLoading=false;
+    var videoStopTime;
+    function videosStop(stopTime){
+        if(isLowPhone){
+            audioPlayer1.pause();
+        }else{
+            audioPlayer1.pause();
+            audioPlayer2.pause();
+        }
+        videoPlayer1.stopAudioTime(stopTime);
+        videoPlayer1.state="stopByloading";
+        videoPlayer2.stopAudioTime(stopTime);
+        videoPlayer2.state="stopByloading";
+        videoStopByLoading=true;
+        videoStopTime=stopTime;
+        eid("loadingVideoGif").style.display="block";
+    }
+
+    function videoLoadComplete() {
+        if(videoPlayer1.loadPercentNum==100&&videoPlayer2.loadPercentNum==100){
+            var newtime=new Date().getTime();
+            var loadTime=newtime-loadStartTime;
+            //console.log("loadTime:"+loadTime);
+            loadGifs();
+        }
+    }
+
+    function animateYindao1(){
+        stm_clicki('send', 'pageview', {'page': '引导页-1', 'title': '引导页-1'});
+        loadingPlayer.stopTime(0);
+        var yindao1=new Sprite(document.getElementById("yindao1"));
+        yindao1.start();
+        setTimeout(function(){
+            txt1_1.start();
+        },1000);
+        setTimeout(function(){
+            txt1_2.start();
+        },2500);
+        setTimeout(function (){
+            txt1_3.start();
+        },4000);
+        setTimeout(function(){
+            icon_txt.start();
+        },5500);
+        setTimeout(function(){
+            icon1_wai.start();
+            icon1_nei.start();
+        },7000);
+        setTimeout(function(){
+            currentPlayer="yindao1";
+        },8000);
+    }
+
+    function animateRotation(element){
+        var position = { rotation: -90};
+        eid(element).style.transform="rotate(-90deg)"
+        var tween = new TWEEN.Tween(position);
+        tween.to({rotation:0},300);
+        tween.onUpdate(function(){
+            eid(element).style.transform="rotate("+position.rotation+"deg)"
+        });
+        tween.start();
+    }
+
+    function animateRotation2(element){
+        var position = { rotation: 90};
+        eid(element).style.transform="rotate(90deg)"
+        var tween = new TWEEN.Tween(position);
+        tween.to({rotation:0},300);
+        tween.onUpdate(function(){
+            eid(element).style.transform="rotate("+position.rotation+"deg)"
+        });
+        tween.start();
+    }
+
+    function animateYindao2(){
+        stm_clicki('send', 'pageview', {'page': '引导页-2', 'title': '引导页-2'});
+        animateRotation("yindaogif2");
+        eid("yindao1").style.display = "none";
+
+        icon1_wai.removeTween();
+        icon1_nei.removeTween();
+
+        eid("yindao2").style.display = "block";
+        currentPlayer="yindao2";
+
+        video_btn.start();
+        var yindao2=new Sprite(document.getElementById("yindao2"));
+        yindao2.start();
+        setTimeout(function(){
+            txt3.start();
+        },1000);
+        setTimeout(function(){
+            icon2.start();
+        },2500);
+        setTimeout(function(){
+            txt4.start();
+            icon3.start();
+        },4000);
+    }
+
+    var videoIsPlaying = false;
+    var audioStartTime;
+
+    function playVideosByClick() {
+        stm_clicki('send', 'event', '点击播放', '点击播放', '点击播放', 1);
+        currentPlayer=2;
+        eid("yindao2").style.display = "none";
+        video_btn.removeTween();
+
+        eid("video2Content").style.display = "block";
+        eid("video1Content").style.display = "none";
+        initVideosAndPlay();
+    }
+
+    function playVideoByReplay(){
+        stm_clicki('send', 'event', '重新观看', '重新观看', '重新观看', 2);
+        eid("infoContent").style.display="none";
+        gif3.stopTime(0);
+        initVideosAndPlay();
+        if(currentPlayer==1){
+            eid("video1Content").style.display = "block";
+        }else if(currentPlayer==2){
+            eid("video2Content").style.display = "block";
+        }
+    }
+
+    function playVideoByLoadingComplete(){
+        if(videoPlayer1.loadPercentNum==100&&videoPlayer2.loadPercentNum==100){
+            eid("loadingVideoGif").style.display="none";
+            videoStopByLoading=false;
+            audioStartTime=new Date().getTime()-videoStopTime*1000;
+            if (currentPlayer == 1) {
+                if(isLowPhone){
+                    if(musicMuted){
+                        audioPlayer1.pause();
+                    }else{
+                        audioPlayer1.currentTime=videoStopTime;
+                        audioPlayer1.play();
+                    }
+                }else{
+                    audioPlayer1.muted = musicMuted;
+                    audioPlayer2.muted=true;
+                    audioPlayer1.play();
+                    audioPlayer2.play();
+                }
+            } else if (currentPlayer == 2) {
+                if(isLowPhone){
+                    if(musicMuted){
+                        audioPlayer1.pause();
+                    }else{
+                        audioPlayer1.currentTime=videoStopTime;
+                        audioPlayer1.play();
+                    }
+                }else{
+                    audioPlayer1.muted = true;
+                    audioPlayer2.muted = musicMuted;
+                    audioPlayer1.play();
+                    audioPlayer2.play();
+                }
+            }
+        }
+    }
+
+    function videoPlayComplete() {
+        if(eid("infoContent").style.display=="block"){
+            return;
+        }
+        stm_clicki('send', 'pageview', {'page': '结束信息页', 'title': '结束信息页'});
+
+        eid("video1Content").style.display = "none";
+        eid("video2Content").style.display = "none";
+
+        videoIsPlaying = false;
+        resizeInfoContent();
+        eid("infoContent").style.display="block";
+        if(isLowPhone){
+            audioPlayer1.pause();
+        }else{
+            audioPlayer1.muted=true;
+            audioPlayer2.muted=true;
+        }
+
+        eid("infoContent").style.opacity=0;
+        var infoContent=new Sprite(document.getElementById("infoContent"));
+        infoContent.start();
+        gif3.currentTime=0;
+        setTimeout(function(){
+            if(gif3.canPlay){
+                gif3.play();
+            }
+        },1000);
+    }
+
+    function refreshVideoByTimes(){
+        if(videoIsPlaying){
+            var currentTime=(new Date().getTime()-audioStartTime)/1000;
+//            eid("aaa").innerHTML="curretTime:"+currentTime+"<br>audioTime:"+audioPlayer1.currentTime+"<br>audioTim2:"+audioPlayer2.currentTime+"<br>videoTime:"+videoPlayer1.currentTime;
+
+            if(videoStopByLoading){
+
+            }else{
+
+                if(audioPlayer1.currentTime<(currentTime-1.5)){
+                    if(isLowPhone){
+                        audioPlayer1.currentTime=currentTime;
+                    }else{
+                        audioPlayer1.currentTime=currentTime;
+                        audioPlayer2.currentTime=currentTime;
+                    }
+                }
+
+                if(currentPlayer==1){
+                    videoPlayer1.playAudioTime(currentTime);
+                }else if(currentPlayer==2){
+                    videoPlayer2.playAudioTime(currentTime);
+                }
+            }
+        }
+    }
+    setInterval(refreshVideoByTimes,70);
+
+    function initVideosAndPlay(){
+        if (videoPlayer1.canPlay && videoPlayer2.canPlay) {
+            if (videoIsPlaying)return;
+
+            stm_clicki('send', 'pageview', {'page': '视频播放页', 'title': '视频播放页'});
+
+            audioStartTime = new Date().getTime();
+            audioPlayer1.currentTime = 0;
+            audioPlayer2.currentTime = 0;
+            if (currentPlayer == 1) {
+
+                if(isLowPhone){
+                    if(musicMuted){
+                        audioPlayer1.pause();
+                    }else{
+                        audioPlayer1.play();
+                    }
+                }else{
+                    audioPlayer1.muted = musicMuted;
+                    audioPlayer2.muted=true;
+                    audioPlayer1.play();
+                    audioPlayer2.play();
+                }
+            } else if (currentPlayer == 2) {
+
+                if(isLowPhone){
+                    if(musicMuted){
+                        audioPlayer1.pause();
+                    }else{
+                        audioPlayer1.play();
+                    }
+                }else{
+                    audioPlayer1.muted = true;
+                    audioPlayer2.muted=musicMuted;
+                    audioPlayer1.play();
+                    audioPlayer2.play();
+                }
+            }
+
+            videoPlayer1.playAudioTime(0);
+            videoPlayer2.playAudioTime(0);
+            videoIsPlaying = true;
+        }
+    }
+
+    function playVideo1(){
+        if(videoIsPlaying){
+            currentPlayer = 1;
+            eid("video1Content").style.display = "block";
+            eid("video2Content").style.display = "none";
+            animateRotation2("video1");
+            playAudio1();
+        }
+    }
+
+    function playVideo2(){
+        if(videoIsPlaying){
+            currentPlayer = 2;
+            eid("video2Content").style.display = "block";
+            eid("video1Content").style.display = "none";
+            animateRotation("video2");
+            playAudio2();
+        }
+    }
+
+    function playAudio1() {
+        if (videoIsPlaying) {
+            if(isLowPhone){
+                if(musicMuted){
+                    audioPlayer1.pause();
+                }else{
+                    audioPlayer1.play();
+                }
+            }else{
+                audioPlayer1.muted = musicMuted;
+                audioPlayer2.muted = true;
+            }
+        }
+    }
+
+    function playAudio2() {
+        if (videoIsPlaying) {
+            if(isLowPhone){
+                if(musicMuted){
+                    audioPlayer1.pause();
+                }else{
+                    audioPlayer1.play();
+                }
+            }else{
+                audioPlayer1.muted = true;
+                audioPlayer2.muted = musicMuted;
+            }
+        }
+    }
+
+    window.addEventListener("deviceorientation", orientationHandler, false);
+
+    function orientationHandler(event) {
+        if (event.gamma < -30) {
+            if(currentPlayer=="yindao1"){
+
+            }else if(currentPlayer==2){
+                if(videoStopByLoading){
+                    currentPlayer = 1;
+                    eid("video1Content").style.display = "block";
+                    eid("video2Content").style.display = "none";
+                    animateRotation2("video1");
+                }else{
+                    playVideo1();
+                }
+            }
+        } else if (event.gamma > 30) {
+            if(currentPlayer=="yindao1"){
+                animateYindao2();
+            }else if(currentPlayer==1){
+                if(videoStopByLoading){
+                    currentPlayer = 2;
+                    eid("video2Content").style.display = "block";
+                    eid("video1Content").style.display = "none";
+                    animateRotation("video2");
+                }else{
+                    playVideo2();
+                }
+            }
+        }
+    }
+
+    $(".musicIcon").click(function(){
+        musicMuted=!musicMuted;
+        if(musicMuted){
+
+            if(isLowPhone){
+                audioPlayer1.pause();
+            }else{
+                audioPlayer1.muted=musicMuted;
+                audioPlayer2.muted=musicMuted;
+            }
+
+            $(".musicIcon").attr("src","images/musicOff.png");
+        }else{
+            $(".musicIcon").attr("src","images/musicOn.png");
+            if(currentPlayer==1){
+                if(videoStopByLoading){
+
+                }else{
+                    if(isLowPhone){
+                        var now = new Date().getTime();
+                        var setPlayTime = (now - audioStartTime) / 1000;
+                        audioPlayer1.currentTime=setPlayTime;
+                        audioPlayer1.play();
+                    }else{
+                        audioPlayer1.muted=false;
+                    }
+                }
+            }else if(currentPlayer==2){
+                if(videoStopByLoading){
+
+                }else{
+
+                    if(isLowPhone){
+                        var now = new Date().getTime();
+                        var setPlayTime = (now - audioStartTime) / 1000;
+                        audioPlayer1.currentTime=setPlayTime;
+                        audioPlayer1.play();
+                    }else{
+                        audioPlayer2.muted=false;
+                    }
+                }
+            }
+        }
+    })
+
+</script>
+</html>

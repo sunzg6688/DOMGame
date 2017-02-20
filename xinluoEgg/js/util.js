@@ -45,6 +45,14 @@
             return document.getElementById(id);
         }
     }
+    //获取star-end之间的随机数
+    if(!window.getRandomNum){
+        window.getRandomNum=function getRandomNum(star,end){
+            var num=end-star;
+            var randomNum=Math.round(Math.random()*num)+star;
+            return randomNum;
+        }
+    }
 })();
 
 //获取屏幕的尺寸大小
