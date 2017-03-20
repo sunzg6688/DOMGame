@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<script type="text/javascript" src="data1.js"></script>-->
+    <script type="text/javascript" src="data2.js"></script>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        #nodePanel {
+            width: 100%;
+            position: relative;
+            height: 500px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        #editPanel {
+            width: 100px;
+            height: 150px;
+            position: absolute;
+            background-color: rgba(55, 55, 55, 0.6);
+            color: #ffffff;
+            display: none;
+            z-index: 999;
+        }
+        .btn {
+            width: 80px;
+            line-height: 30px;
+            text-align: center;
+            margin: 15px auto;
+            cursor: pointer;
+            background-color: #555555;
+            font-size: 12px;
+        }
+
+        #searchPanel {
+            padding: 30px;
+            height: 50px;
+            line-height: 50px;
+            overflow: hidden;
+        }
+        #inputPanel{
+            float: left;
+            width: 280px;
+        }
+        #searchBtn {
+            width: 50px;
+            height: 30px;
+            margin-top: 10px;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            float: left;
+            background-color: #555555;
+        }
+        #stage{
+            position: relative;
+        }
+        #developerDoc{
+            line-height: 26px;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="developerDoc">
+    （1）根据数组数据生成树结构<br>
+    （2）“+”代表包含子节点的节点没有被展开，点击可以展开子节点<br>
+    （3）“-”代表包含子节点的节点已经被展开，点击可以隐藏子节点<br>
+    （4）点击“编辑”按钮可以对节点进行添加，删除，重命名等操作。
+</div>
+<div id="searchPanel">
+    <div id="inputPanel">
+        <span>筛选层级：</span>
+        <input id="searchInput">
+    </div>
+    <div id="searchBtn">筛选</div>
+</div>
+<div id="stage">
+    <div id="nodePanel">
+    </div>
+    <div id="editPanel">
+        <div id="addNodeBtn" class="btn">添加子节点</div>
+        <div id="deleteNodeBtn" class="btn">删除此节点</div>
+        <div id="renameNodeBtn" class="btn">重命名此节点</div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="TreeNode.js"></script>
+</html>
