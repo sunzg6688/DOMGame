@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+        }
+        #map{
+            position: relative;
+            width: 900px;
+            height: 900px;
+            border: solid 1px #ffffff;
+            font-size: 10px;
+            line-height: 30px;
+            text-align: center;
+            /*overflow: scroll;*/
+        }
+        #search{
+               cursor: pointer;
+               width: 90px;
+               height: 30px;
+               background-color: #555;
+               position: absolute;
+               left: 945px;
+               top: 30px;
+               text-align: center;
+               line-height: 30px;
+           }
+        #search2{
+            cursor: pointer;
+            width: 90px;
+            height: 30px;
+            background-color: #555;
+            position: absolute;
+            left: 945px;
+            top: 75px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #search3{
+            cursor: pointer;
+            width: 90px;
+            height: 30px;
+            background-color: #555;
+            position: absolute;
+            left: 945px;
+            top: 120px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #search4{
+            cursor: pointer;
+            width: 90px;
+            height: 30px;
+            background-color: #555;
+            position: absolute;
+            left: 945px;
+            top: 165px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #search5{
+            cursor: pointer;
+            width: 90px;
+            height: 30px;
+            background-color: #555;
+            position: absolute;
+            left: 945px;
+            top: 210px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #txtData{
+            cursor: pointer;
+            width: 90px;
+            height: 30px;
+            background-color: #555;
+            position: absolute;
+            left: 945px;
+            top: 300px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #pop{
+            display: none;
+            position: absolute;
+            z-index: 99;
+            width: 600px;
+            height: 600px;
+            left: 150px;
+            top: 150px;
+            overflow: scroll;
+            background-color: #ffffff;
+        }
+        #closePop{
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            margin: 10px auto;
+            background-color: #555555;
+        }
+        #dataDiv{
+            margin-top: 60px;
+        }
+    </style>
+    <script type="text/javascript" src="animate/Node.js"></script>
+    <script type="text/javascript" src="SearchUtilsAnimate.js"></script>
+    <script type="text/javascript" src="SearchUtils2Animate.js"></script>
+    <script type="text/javascript" src="SearchUtils3Animate.js"></script>
+    <!--<script type="text/javascript" src="mapData.js"></script>-->
+    <script type="text/javascript" src="animate/mapData2.js"></script>
+
+</head>
+<body>
+<div id="map" onclick="resetNodeData(event)"></div>
+<div id="search"onclick="searchPath()">普通查找</div>
+<div id="search2" onclick="searchPath2()">二叉堆</div>
+<div id="search3" onclick="searchPath3()">二分法</div>
+<div id="search4" onclick="onlyPath()">只留路径</div>
+<div id="search5" onclick="clearPath()">清除路径</div>
+<div id="txtData" onclick="txtData()">获取mapData</div>
+<div id="pop">
+    <div id="closePop" onclick="closePop()">关闭</div>
+    <div id="dataDiv"></div>
+</div>
+</body>
+<script>
+    function eid(id){
+        return document.getElementById(id);
+    }
+    var map=eid("map");
+    function createDomElement(y,x,cross){
+        var element=document.createElement("div");
+        element.style.position="absolute";
+        element.style.left=x*30+"px";
+        element.style.top=y*30+"px";
+        element.style.width="30px";
+        element.style.height="30px";
+        element.style.border="solid 1px #bbb";
+//        element.innerHTML=""+y+","+x+"";
+        if(cross){
+            element.style.backgroundColor="#999999";
+        }else{
+            element.style.backgroundColor="#333333";
+        }
+        map.appendChild(element);
+        return element;
+    }
+
+    var totalX=30;
+    var totalY=30;
+
+    var startX=2;
+    var startY=2;
+
+    var targetX=totalX-5;
+    var targetY=totalY-5;
+
+    //这个地方是随机生成测试数据使用
+    function createTestData(){
+        mapData=[];
+        for(var y=0;y<totalY;y++){
+            var arr=[];
+            for(var x=0;x<totalX;x++){
+                if(x==startX&&y==startY){
+                    arr.push(1);
+                } else if(x==targetX&&y==targetY){
+                    arr.push(1);
+                }else{
+                    if(Math.random()<0.35){
+                        arr.push(0);
+                    }else{
+                        arr.push(1);
+                    }
+                }
+            }
+            mapData.push(arr);
+        }
+    }
+    //注释掉这个方法可以使用mapData.js里已有的数据
+    createTestData();
+
+    function txtData(){
+        var txt='mapData = [';
+        for(var y=0;y<mapData.length;y++){
+            txt+='[';
+            for(var x=0;x<mapData[y].length;x++){
+                txt+=mapData[y][x]+',';
+            }
+            if(y==mapData.length-1){
+                txt+=']'
+            }else{
+                txt+='],'
+            }
+        }
+        txt+="]";
+
+        eid("dataDiv").innerHTML=txt;
+        eid("pop").style.display="block";
+    }
+
+    function closePop(){
+        eid("pop").style.display="none";
+    }
+
+    function resetNodeData(event){
+        var posX=event.clientX;
+        var posY=event.clientY;
+        var x=Math.floor(posX/30);
+        var y=Math.floor(posY/30);
+        if(mapData[y][x]==1){
+            mapData[y][x]=0;
+            nodeData[y][x].cross=false;
+            nodeData[y][x].element.style.backgroundColor="#333333";
+        }else{
+            mapData[y][x]=1;
+            nodeData[y][x].cross=true;
+            nodeData[y][x].element.style.backgroundColor="#999999";
+        }
+    }
+
+    var nodeData=[];
+    function createMapByData(){
+        for(var y=0;y<mapData.length;y++){
+            var array=[];
+            for(var x=0;x<mapData[y].length;x++){
+                var obj={x:x,y:y};
+                var element;
+                if(mapData[y][x]==1){
+                    element=createDomElement(y,x,true);
+                    obj.cross=true;
+                }else if(mapData[y][x]==0){
+                    element=createDomElement(y,x,false);
+                    obj.cross=false;
+                }
+                var node=new Node(obj);
+                node.element=element;
+                array.push(node);
+            }
+            nodeData.push(array);
+        }
+        colorStartAndTarget();
+    }
+
+    createMapByData();
+
+    function searchAll(){
+        searchPath();
+        searchPath2();
+        searchPath3();
+    }
+
+    function resetNodeElement(){
+        for(var y=0;y<nodeData.length;y++){
+            for(var x=0;x<nodeData[y].length;x++){
+                if(nodeData[y][x].cross){
+                    nodeData[y][x].element.style.backgroundColor="#999999";
+                }else{
+                    nodeData[y][x].element.style.backgroundColor="#333333"
+                }
+            }
+        }
+        colorStartAndTarget();
+    }
+
+    var searchType;
+    var searchUtils=new SearchUtilsAnimate();
+    var path;
+    function searchPathComplete(){
+        path=searchUtils.path;
+        for(var i=0;i<path.length;i++){
+            path[i].element.style.backgroundColor="green";
+        }
+        colorStartAndTarget();
+        searchType=1;
+    }
+
+    function searchPath(){
+        resetNodeElement();
+        searchUtils.getPath(nodeData[startY][startX],nodeData[targetY][targetX],nodeData,searchPathComplete);
+    }
+
+    var searchUtils2=new SearchUtils2Animate();
+    var path2;
+
+    function searchPath2Complete(){
+        path2=searchUtils2.path;
+        for(var i=0;i<path2.length;i++){
+            path2[i].element.style.backgroundColor="green";
+        }
+        colorStartAndTarget();
+        searchType=2;
+    }
+
+    function searchPath2(){
+        resetNodeElement();
+        searchUtils2.getPath(nodeData[startY][startX],nodeData[targetY][targetX],nodeData,searchPath2Complete);
+    }
+
+    var searchUtils3=new SearchUtils3Animate();
+    var path3;
+    function searchPath3Complete(){
+        path3=searchUtils3.path;
+        for(var i=0;i<path3.length;i++){
+            path3[i].element.style.backgroundColor="green";
+        }
+        colorStartAndTarget();
+        searchType=3;
+    }
+
+    function searchPath3(){
+        resetNodeElement();
+        searchUtils3.getPath(nodeData[startY][startX],nodeData[targetY][targetX],nodeData,searchPath3Complete);
+    }
+
+    function colorStartAndTarget(){
+        nodeData[startY][startX].element.style.backgroundColor="red";
+        nodeData[targetY][targetX].element.style.backgroundColor="red";
+    }
+
+    function clearPath(){
+        if(path){
+            for(var i=0;i<path.length;i++){
+                path[i].element.style.backgroundColor="#999999"
+            }
+        }
+        if(path2){
+            for(var i=0;i<path2.length;i++){
+                path2[i].element.style.backgroundColor="#999999"
+            }
+        }
+        if(path3){
+            for(var i=0;i<path3.length;i++){
+                path3[i].element.style.backgroundColor="#999999"
+            }
+        }
+        resetNodeElement();
+        colorStartAndTarget();
+    }
+
+    function onlyPath(){
+        if(searchType){
+            resetNodeElement();
+            if(searchType==1){
+                for(var i=0;i<path.length;i++){
+                    path[i].element.style.backgroundColor="green";
+                }
+            }else if(searchType==2){
+                for(var i=0;i<path2.length;i++){
+                    path2[i].element.style.backgroundColor="green";
+                }
+            }else if(searchType==3){
+                for(var i=0;i<path3.length;i++){
+                    path3[i].element.style.backgroundColor="green";
+                }
+            }
+            colorStartAndTarget();
+        }
+
+    }
+</script>
+</html>
