@@ -16,6 +16,7 @@ AStar 是A*寻路算法实现 <br>
 寻路过程分别用 普通优化的方法，二叉堆优化的方法，和二分查找优化的方法实现。<br>
 项目里包含了 3种不同优化方法的效率对比，和动态显示寻路过程。<br>
 AStartDemo.html是一个demo页面，AStarAnimate.html是一个动态展示寻路过程的页面，AStarTest.html是一个展示3中不同方式寻路消耗的时间对比页面。<br>
-测试地址：https://sunzg6688.github.io/DOMGame/AStar/AStarAnimate.html;<br>
+测试地址：<br>
+https://sunzg6688.github.io/DOMGame/AStar/AStarAnimate.html;每次都会随机生成地图打点数据<br>
 https://sunzg6688.github.io/DOMGame/AStar/AStarDemo.html;<br>
-https://sunzg6688.github.io/DOMGame/AStar/AStarTest.html;<br>
+https://sunzg6688.github.io/DOMGame/AStar/AStarTest.html;每次都会随机生成地图打点数据<br>
