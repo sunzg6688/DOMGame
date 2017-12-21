@@ -9,6 +9,8 @@ infiniti_video2 是一个通过手机陀螺仪，翻转手机播放两个不同�
 手机横屏会播放视频1，翻转手机会播放视频2，因为iphone中，播放视频必须为全屏，所以两个视频其实是通过和音频配合，播放的视频序列帧图片。<br>
 http://infiniti.opentide.com.cn/love/index.html
 
+
+下面两个项目最好用pc网页打开
 tree 是一个根据数组数据生成父子层级关系的项目<br>
 测试地址：https://sunzg6688.github.io/DOMGame/tree/tree.html;<br>
 
