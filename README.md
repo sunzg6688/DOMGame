@@ -17,7 +17,7 @@ http://infiniti.opentide.com.cn/love/index.html
 4.AStar 是A*寻路算法实现 <br>
 寻路过程分别用 普通优化的方法，二叉堆优化的方法，和二分查找优化的方法实现。<br>
 项目里包含了 3种不同优化方法的效率对比，和动态显示寻路过程。<br>
-AStartDemo.html是一个demo页面，AStarAnimate.html是一个动态展示寻路过程的页面，AStarTest.html是一个展示3中不同方式寻路消耗的时间对比页面。<br>
+AStartDemo.html是一个demo页面，AStarAnimate.html是一个动态展示寻路过程的页面，每次都会随即生产不同的网格数据，AStarTest.html是一个展示3中不同方式寻路消耗的时间对比页面。<br>
 测试地址：<br>
 AStarAnimate.html和AStarTest.html页面，每次都会随机生成新的网格数据<br>
 https://sunzg6688.github.io/DOMGame/AStar/AStarAnimate.html;<br>
